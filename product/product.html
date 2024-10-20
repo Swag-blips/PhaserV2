@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>product</title>
+    <link rel="stylesheet" href="./product.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body>
+    <header>
+      <div class="logoholder">
+        <img src="/image/png.png" alt="" class="logo" />
+      </div>
+      <nav class="nav" id="nav-menu" >
+        <ul>
+          <li><a href="/landing/home.html">Home</a></li>
+          <li><a href="/product/product.html">Product</a></li>
+          <li><a href="/category/category.html">Category</a></li>
+        </ul>
+      </nav>
+
+      <div class="login">
+        <a href="../cart1.html">
+          <div class="cart-header">
+            <img src="/image/cart2.svg" alt="" />
+            <span id="cart-count" class="cart-count">0</span>
+          </div>
+        </a>
+        <div class="signin" id="signin">
+          <a href="/index.html" id="signin-btn"> <button>Sign in</button></a>
+          <a href="/index.html" id="logout-btn" style="display: none">
+            <button>Sign in</button></a
+          >
+        </div>
+        <div class="hamburger cart-header" id="hamburg">
+          <img src="../image/hamburger.svg" alt="" />
+        </div>
+      </div>
+    </header>
+
+    
+    <div class="xplore">
+      <div class="xploreholder">
+        <div class="textside">
+          <h3>Explore More Product</h3>
+        </div>
+        <div class="textside1">
+          <img src="/image/su.png" alt="" />
+        </div>
+      </div>
+    </div>
+   
+
+    <div class="productside heropage1">
+      <div class="card1">
+        <div class="cardimage">
+          <img src="../image/shoe11.png" alt=""  onclick="viewProductDetails('Black Leather Shoe', 70000, '../image/shoe11.png' )" />
+        </div>
+        <div class="cardtext1">
+          <p>Black Leather Shoe</p>
+          <div class="money_cart">
+            <h4>70,000</h4>
+            <div class="buy">
+              <button
+                class="button"
+                onclick="addToCart('Black Leather Shoe', 70000, '/image/shoe11.png')"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card1">
+        <div class="cardimage">
+          <img src="../image/suie8.png" alt=""  onclick="viewProductDetails('UK suite', 900, '../image/suie8.png' )" />
+        </div>
+        <div class="cardtext1">
+          <p>UK suite</p>
+          <div class="money_cart">
+            <h4>9000</h4>
+            <div class="buy">
+              <button
+                class="button"
+                onclick="addToCart('UK suite', 90000, '/image/suie8.png')"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card1">
+        <div class="cardimage">
+          <img src="../image/watch1.png" alt=""  onclick="viewProductDetails('Brown Leather Watch',5000, '../image/watch1.png' )" />
+        </div>
+        <div class="cardtext1">
+          <p>Brown Leather Watch</p>
+          <div class="money_cart">
+            <h4>5000</h4>
+            <div class="buy">
+              <button
+                class="button"
+                onclick="addToCart('Brown Leather Watch', 5000, '/image/watch1.png')"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card1">
+        <div class="cardimage">
+           <img src="../image/belt3.png" alt=""  onclick="viewProductDetails('Belt Set', 1000, '../image/belt3.png' )" />
+        </div>
+        <div class="cardtext1">
+          <p>Belt Set</p>
+          <div class="money_cart">
+            <h4>10000</h4>
+            <div class="buy">
+              <button
+                class="button"
+                onclick="addToCart('Belt Set', 10000, '../image/belt3.png')"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card1">
+        <div class="cardimage">
+           <img src="../image/shoe10.png" alt=""  onclick="viewProductDetails('Vintage Shoe', 40000, '../image/shoe10.png' )" />
+        </div>
+        <div class="cardtext1">
+          <p>Vintage Shoe</p>
+          <div class="money_cart">
+            <h4>40,000</h4>
+            <div class="buy">
+              <button
+                class="button"
+                onclick="addToCart('vintage Shoe', 40000, '/image/shoe10.png')"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card1">
+        <div class="cardimage">
+           <img src="../image/watch3.png" alt=""  onclick="viewProductDetails('G-shock Watch', 50000, '../image/watch3.png' )" />
+        </div>
+        <div class="cardtext1">
+          <p>G-shock Watch</p>
+          <div class="money_cart">
+            <h4>50,000</h4>
+            <button
+              class="button"
+              onclick="addToCart('G-shock Watch', 50000, '/image/watch3.png')"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card1">
+        <div class="cardimage">
+          <img src="../image/belt1.png" alt=""  onclick="viewProductDetails('Gucci Belt', 20000, '../image/belt1.png' )" />
+        </div>
+        <div class="cardtext1">
+          <p>Gucci Belt</p>
+          <div class="money_cart">
+            <h4>20,000</h4>
+            <button
+              class="button"
+              onclick="addToCart('Gucci Belt', 20000, '../image/belt1.png')"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card1">
+        <div class="cardimage">
+          <img src="../image/watch2.png" alt=""  onclick="viewProductDetails('Stainless Watch', 60000, '../image/watch2.png' )" />
+        </div>
+        <div class="cardtext1">
+          <p>Stainless Watch</p>
+          <div class="money_cart">
+            <h4>60,000</h4>
+            <button
+              class="button"
+              onclick="addToCart('Stainless Watch', 60000, '/image/watch2.png')"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card1">
+        <div class="cardimage">
+          <img src="../image/suie8.png" alt=""  onclick="viewProductDetails('Grey Suit', 90000, '../image/watch2.png' )" />
+        </div>
+        <div class="cardtext1">
+          <p>Grey Suit</p>
+          <div class="money_cart">
+            <h4>90,000</h4>
+            <button
+              class="button"
+              onclick="addToCart('Grey Suit', 90000, '/image/suite.png')"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card1">
+        <div class="cardimage">
+          <img src="../image/shoe2.png" alt=""  onclick="viewProductDetails('Burrberry Shoe', 200000, '../image/watch2.png' )" />
+        </div>
+        <div class="cardtext1">
+          <p>Burrberry Shoe</p>
+          <div class="money_cart">
+            <h4>200,000</h4>
+            <button
+              class="button"
+              onclick="addToCart('Burrberry Shoe', 200000, '/image/shoe2.png')"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="card1">
+        <div class="cardimage">
+          <img src="../image/suite12.png" alt=""  onclick="viewProductDetails('Black Suite', 30000, '../image/suite12.png' )" />
+        </div>
+        <div class="cardtext1">
+          <p>Black Suite</p>
+          <div class="money_cart">
+            <h4>30,000</h4>
+            <button
+              class="button"
+              onclick="addToCart('Black Suite', 300000, '/image/suite12.png')"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card1">
+        <div class="cardimage">
+        
+          <img src="/image/thebelt.jpg" alt=""  onclick="viewProductDetails('Italian Belt', 30000, '/image/thebelt.jpg' )" />
+    
+        </div>
+        <div class="cardtext1">
+          <p>Italian Belt</p>
+          <div class="money_cart">
+            <h4>30,000</h4>
+            <button
+              class="button"
+              onclick="addToCart('Italian Belt', 30000, '/image/thebelt.jpg')"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card1">
+        <div class="cardimage">
+          <img src="../image/suite8.png" alt=""  onclick="viewProductDetails('Turkey Shoe', 80000, '../image/suite8.png' )" />
+        </div>
+        <div class="cardtext1">
+          <p>Turkey Shoe</p>
+          <div class="money_cart">
+            <h4>80,000</h4>
+            <button
+              class="button"
+              onclick="addToCart('Turkey Shoe', 80000, '/image/shoe8.png')"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card1">
+        <div class="cardimage">
+          <img src="../image/suite9.png" alt=""  onclick="viewProductDetails('German Tuxedo', 60000, '../image/suite9.png' )" />
+        </div>
+        <div class="cardtext1">
+          <p>German Tuxedo</p>
+          <div class="money_cart">
+            <h4>60,000</h4>
+            <button
+              class="button"
+              onclick="addToCart('German Tuxedo', 60000, '../image/suite9.png')"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card1">
+        <div class="cardimage">
+          <img src="../image/suit3.png" alt=""  onclick="viewProductDetails('Leather Suite', 100000, '../image/suit3.png' )" />
+        </div>
+        <div class="cardtext1">
+          <p>Leather Suite</p>
+          <div class="money_cart">
+            <h4>100,000</h4>
+            <button
+              class="button"
+              onclick="addToCart('Leather Suite', 100000, '../image/suit3.png')"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footerchild">
+        <div class="logoside">
+          <div class="logo2">
+            <img src="../image/whi.png" alt="" />
+          </div>
+          <br />
+          <p >
+            Lorem ipsum, dolor sit amet consectetur <br />
+            adipisicing elit. Perferendis id vero deleniti <br />
+          
+          </p>
+
+          <div class="media">
+            <div class="cicle">
+              <img src="../image/facebook-svgrepo-com (4).svg" alt="" />
+            </div>
+
+            <div class="cicle">
+              <img src="../image/instagram-svgrepo-com.svg" alt="" />
+            </div>
+
+            <div class="cicle">
+              <img src="../image/twitter-svgrepo-com (2).svg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="contact">
+          <h4>INFORMATION</h4>
+          <br />
+
+          <p>My account</p>
+          <p>Check Out</p>
+          <p>Help</p>
+          <p>Surport</p>
+          <p>FQR</p>
+        </div>
+        <div class="contact">
+          <h4>CONTACT</h4>
+          <br />
+          <div class="call1">
+            <div class="theimages">
+              <img src="../image/location-indicator-svgrepo-com.svg" alt="" />
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur elit.</p>
+          </div>
+
+          <div class="call">
+            <div class="theimages">
+              <img src="../image/call-receive-svgrepo-com.svg" alt="" />
+            </div>
+            <p>0803737383477</p>
+          </div>
+          <div class="call">
+            <div class="theimages">
+              <img src="../image/icon-email.svg" alt="" />
+            </div>
+            <p>johndeo@gmail.com</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      // add to cart function that saves to localStorage
+      const addToCart = (productName, price, imageUrl) => {
+  // Fetch cart from localStorage or initialize as an empty array
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const existingProduct = cart.find(item => item.name === productName);
+
+  if (existingProduct) {
+    // Increase quantity if product exists
+    existingProduct.quantity += 1;
+  } else {
+    // Add new product to the cart if it doesn't exist
+    const newProduct = {
+      name: productName,
+      price: price,
+      image: imageUrl,
+      quantity: 1
+    };
+    cart.push(newProduct);
+  }
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+  Swal.fire({
+          title: "Added to Cart!",
+          text: `${productName} has been added to your cart.`,
+          icon: "success",
+          confirmButtonText: "Cool!",
+          timer: 2000, // Set the timer to 3000ms (3 seconds)
+          timerProgressBar: true,
+        });
+
+
+  // Update cart count in the cart-icon
+  updateCartCount();
+};
+
+const viewProductDetails = (name, price, imageUrl) => {
+  const productDetails = {
+    name: name,
+    price: price,
+    imageUrl: imageUrl
+  };
+  localStorage.setItem('selectedProduct', JSON.stringify(productDetails));
+  // Redirect to product details page
+  window.location.href = '/detail page/detail.html';
+}
+
+
+      // function to update cart icon count
+      const updateCartCount = () => {
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const totalItem = cart.reduce((acc, item) => acc + item.quantity, 0);
+        document.getElementById("cart-count").textContent = totalItem;
+        
+       const cartCountElement = document.getElementById("cart-count"); // Select the cart count element
+    cartCountElement.textContent = totalItem; // Update the text content with total items
+
+    // Show or hide the badge based on totalItem
+    if (totalItem > 0) {
+        cartCountElement.style.display = "inline-block"; // Show badge if count > 0
+    } else {
+        cartCountElement.style.display = "none"; // Hide badge if count is 0
+    }
+      };
+      window.onload = updateCartCount;
+
+      document.getElementById("hamburg")?.addEventListener("click", () => {
+        document.getElementById("nav-menu")?.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>

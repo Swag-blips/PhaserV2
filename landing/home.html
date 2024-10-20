@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gentle Men</title>
+    <link rel="stylesheet" href="./home.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body>
+    <header>
+      <div class="logoholder">
+        <img src="/image/png.png" alt="" class="logo" />
+      </div>
+      <nav class="nav" id="nav-menu">
+        <ul>
+          <li><a href="/landing/home.html">Home</a></li>
+          <li><a href="/product/product.html">Product</a></li>
+          <li><a href="/category/category.html">Category</a></li>
+        </ul>
+      </nav>
+
+      <div class="login">
+        <a href="../cart1.html">
+          <div class="cart-header">
+            <img src="/image/cart2.svg" alt="" />
+            <span id="cart-count" class="cart-count">0</span>
+          </div>
+        </a>
+        <div class="signin" id="signin">
+          <a href="/index.html" id="signin-btn"> <button>Sign in</button></a>
+          <a href="/index.html" id="logout-btn" style="display: none">
+            <button>Logout</button></a
+          >
+        </div>
+        <div class="hamburger cart-header" id="hamburg">
+          <img src="../image/hamburger.svg" alt="" />
+        </div>
+      </div>
+    </header>
+    <div class="heropage">
+      <div class="grouping">
+        <div class="heropage_texside">
+          <div class="text">
+            <div class="gentle">
+              <div class="coll">
+                <h5>NEW COLLECTION</h5>
+              </div>
+              <h2>Gentle Men</h2>
+              <p>FASHION STORE</p>
+            </div>
+            <br />
+            <a href="../product/product.html">
+              <button class="shopnow">
+                <p>Shop now!</p>
+              </button></a
+            >
+          </div>
+        </div>
+
+        <div class="heropage_imageside"></div>
+      </div>
+    </div>
+
+    <div class="category heropage1">
+      <div class="heading">
+        <h3>Shop by Categories</h3>
+        <hr />
+      </div>
+      <div class="cardgrouping">
+        <a href="../suite/suite.html">
+          <div class="card">
+            <div class="cardimg">
+              <img src="/image/suti.jpg" alt="" />
+            </div>
+
+            <div class="hover">
+              <h2>Suite</h2>
+            </div>
+          </div></a
+        >
+        <a
+          href="../shoe/shoe.html
+"
+        >
+          <div class="card">
+            <div class="cardimg">
+              <img src="../image/oxford-shoes-6078993_1280.jpg" alt="" />
+            </div>
+
+            <div class="hover">
+              <h2>Shoe</h2>
+            </div>
+          </div></a
+        >
+
+        <a href="../watch/watch.html">
+          <div class="card">
+            <div class="cardimg">
+              <img src="../image/download (15).jpg" alt="" />
+            </div>
+
+            <div class="hover">
+              <h2>Watch</h2>
+            </div>
+          </div></a
+        >
+      </div>
+    </div>
+    <div class="bestseller heropage1">
+      <div class="bestseller_heading">
+        <h3>Best Sellers</h3>
+        <hr />
+      </div>
+
+      <div class="bestseller_card">
+        <div class="card1">
+          <div class="cardimage">
+            <img
+              src="../image/belt5.jpg"
+              alt=""
+              onclick="viewProductDetails('Black leather belt', 540, '../image/belt5.jpg' )"
+            />
+          </div>
+          <div class="cardtext1">
+            <p>Black leather belt</p>
+            <div class="money_cart">
+              <h4>₦540</h4>
+              <div class="buy">
+                <button
+                  class="button"
+                  onclick="addToCart('Black leather belt', 540, '/image/belt5.jpg')"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card1">
+          <div class="cardimage">
+            <img
+              src="../image/suite12.png"
+              alt=""
+              onclick="viewProductDetails('Grey suite', 200, '../image/suite12.png' )"
+            />
+          </div>
+          <div class="cardtext1">
+            <p>Grey suite</p>
+            <div class="money_cart">
+              <h4>₦200</h4>
+              <div class="buy">
+                <button
+                  class="button"
+                  onclick="addToCart('Grey suite', 200, '../image/suite12.png')"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card1">
+          <div class="cardimage">
+            <img
+              src="../image/red.png"
+              alt=""
+              onclick="viewProductDetails('German Tux', 600, '../image/red.png' )"
+            />
+          </div>
+          <div class="cardtext1">
+            <p>German Tux</p>
+            <div class="money_cart">
+              <h4>₦600</h4>
+              <div class="buy">
+                <button
+                  class="button"
+                  onclick="addToCart('German Tux', 600, '../image/red.png')"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card1">
+          <div class="cardimage">
+            <img
+              src="/image/brown.png"
+              alt=""
+              onclick="viewProductDetails('Brown Watch', 500, '/image/brown.png' )"
+            />
+          </div>
+          <div class="cardtext1">
+            <p>Brown Watch</p>
+            <div class="money_cart">
+              <h4>₦500</h4>
+              <div class="buy">
+                <button
+                  class="button"
+                  onclick="addToCart('Brown Watch', 500, '/image/brown.png')"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card1">
+          <div class="cardimage">
+            <img
+              src="/image/belt6.jpg"
+              alt=""
+              onclick="viewProductDetails('Cros Belt', 400, '/image/belt6.jpg' )"
+            />
+          </div>
+          <div class="cardtext1">
+            <p>Cros Belt</p>
+            <div class="money_cart">
+              <h4>₦400</h4>
+              <div class="buy">
+                <button
+                  class="button"
+                  onclick="addToCart('Cros Belt', 400, '/image/belt6.jpg')"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card1">
+          <div class="cardimage">
+            <img
+              src="../image/shoe7.png"
+              alt=""
+              onclick="viewProductDetails('Brown Italian Show', 800, '../image/shoe7.png' )"
+            />
+          </div>
+          <div class="cardtext1">
+            <p>Brown Italian Shoe</p>
+            <div class="money_cart">
+              <h4>₦800</h4>
+              <div class="buy">
+                <button
+                  class="button"
+                  onclick="addToCart('Brown Italian Shoe', 800, '../image/shoe7.png')"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card1">
+          <div class="cardimage">
+            <img
+              src="../image/shoe11.png"
+              alt=""
+              onclick="viewProductDetails('Gucci Black Shoe', 600, '../image/shoe11.png' )"
+            />
+          </div>
+          <div class="cardtext1">
+            <p>Gucci Black Shoe</p>
+            <div class="money_cart">
+              <h4>₦600</h4>
+              <div class="buy">
+                <button
+                  class="button"
+                  onclick="addToCart('Gucci Black Shoe', 600, '../image/shoe11.png')"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card1">
+          <div class="cardimage">
+            <img
+              src="/image/rolex.png"
+              alt=""
+              onclick="viewProductDetails('Rolex Watch', 1000, '/image/brown.png')"
+            />
+          </div>
+          <div class="cardtext1">
+            <p>Rolex Watch</p>
+            <div class="money_cart">
+              <h4>₦1000</h4>
+
+              <button
+                class="button"
+                onclick="addToCart('Rolex Watch', 1000, '/image/brown.png')"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footerchild">
+        <div class="logoside">
+          <div class="logo2">
+            <img src="../image/whi.png" alt="" />
+          </div>
+          <br />
+          <p>
+            Lorem ipsum, dolor sit amet consectetur <br />
+            adipisicing elit. Perferendis id vero deleniti <br />
+          </p>
+
+          <div class="media">
+            <div class="cicle">
+              <img src="../image/facebook-svgrepo-com (4).svg" alt="" />
+            </div>
+
+            <div class="cicle">
+              <img src="../image/instagram-svgrepo-com.svg" alt="" />
+            </div>
+
+            <div class="cicle">
+              <img src="../image/twitter-svgrepo-com (2).svg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="contact">
+          <h4>INFORMATION</h4>
+          <br />
+
+          <a href="#"> <p>My account</p></a>
+          <a href="#"> <p>Check Out</p></a>
+          <a href="#"> <p>Help</p></a>
+          <a href="#"> <p>Surport</p></a>
+          <a href="#"> <p>FAQ</p></a>
+        </div>
+        <div class="contact">
+          <a href="#"> <h4>CONTACT</h4></a>
+          <br />
+          <div class="call1">
+            <div class="theimages">
+              <img src="../image/location-indicator-svgrepo-com.svg" alt="" />
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur elit.</p>
+          </div>
+
+          <div class="call">
+            <div class="theimages">
+              <img src="../image/call-receive-svgrepo-com.svg" alt="" />
+            </div>
+            <p>0803737383477</p>
+          </div>
+          <div class="call">
+            <div class="theimages">
+              <img src="../image/icon-email.svg" alt="" />
+            </div>
+            <p>johndeo@gmail.com</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // add to cart function that saves to localStorage
+      const addToCart = (productName, price, imageUrl) => {
+        // Fetch cart from localStorage or initialize as an empty array
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const existingProduct = cart.find((item) => item.name === productName);
+
+        if (existingProduct) {
+          // Increase quantity if product exists
+          existingProduct.quantity += 1;
+        } else {
+          // Add new product to the cart if it doesn't exist
+          const newProduct = {
+            name: productName,
+            price: price,
+            image: imageUrl,
+            quantity: 1,
+          };
+          cart.push(newProduct);
+        }
+
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        Swal.fire({
+          title: "Added to Cart!",
+          text: `${productName} has been added to your cart.`,
+          icon: "success",
+          confirmButtonText: "Cool!",
+          timer: 2000, // Set the timer to 3000ms (3 seconds)
+          timerProgressBar: true, // Show a progress bar during the timer
+        });
+
+        // Update cart count in the cart-icon
+        updateCartCount();
+      };
+
+      const viewProductDetails = (name, price, imageUrl) => {
+        const productDetails = {
+          name: name,
+          price: price,
+          imageUrl: imageUrl,
+        };
+        localStorage.setItem("selectedProduct", JSON.stringify(productDetails));
+        // Redirect to product details page
+        window.location.href = "/detail page/detail.html";
+      };
+
+      // function to update cart icon count
+      const updateCartCount = () => {
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const totalItem = cart.reduce((acc, item) => acc + item.quantity, 0);
+        document.getElementById("cart-count").textContent = totalItem;
+
+        const cartCountElement = document.getElementById("cart-count"); // Select the cart count element
+        cartCountElement.textContent = totalItem; // Update the text content with total items
+
+        // Show or hide the badge based on totalItem
+        if (totalItem > 0) {
+          cartCountElement.style.display = "inline-block"; // Show badge if count > 0
+        } else {
+          cartCountElement.style.display = "none"; // Hide badge if count is 0
+        }
+      };
+      window.onload = updateCartCount;
+
+      document.getElementById("hamburg")?.addEventListener("click", () => {
+        document.getElementById("nav-menu")?.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>

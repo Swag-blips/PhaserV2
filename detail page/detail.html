@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail page</title>
+    <link rel="stylesheet" href="./detail.css" />
+  </head>
+  <body>
+    <div class="trans">
+      <header>
+        <div class="logoholder">
+          <img src="/image/png.png" alt="" class="logo" />
+        </div>
+        <nav id="nav-menu">
+          <ul>
+            <li><a href="/landing/home.html">Home</a></li>
+            <li><a href="/product/product.html">Product</a></li>
+            <li><a href="/category/category.html">Category</a></li>
+          </ul>
+        </nav>
+
+        <div class="login">
+          <a href="../cart1.html">
+            <div class="cart-header">
+              <img src="../image/cart-large-2-svgrepo-com copy.svg" alt="" />
+              <span id="cart-count" class="cart-count">0</span>
+            </div>
+          </a>
+          <div class="signin" id="signin">
+            <a href="/index.html" id="signin-btn"> <button>Sign in</button></a>
+            <a href="/index.html" id="logout-btn" style="display: none">
+              <button>Sign in</button></a
+            >
+          </div>
+          <div class="hamburger cart-header" id="hamburg">
+            <img src="../image/hamburger.svg" alt="" />
+          </div>
+        </div>
+      </header>
+      <div class="details">
+        <div class="imageside">
+          <div class="productimage">
+            <img src="" alt="" id="product-image" />
+          </div>
+        </div>
+
+        <div class="textside">
+          <div class="productname">
+            <h3 id="product-name"></h3>
+          </div>
+
+          <div class="discription">
+            <div class="thetext">
+              <h4>DISCRIPTION</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repellendus fuga enim nisi eligendi quidem! Saepe ut recusandae
+                necessitatibus deleniti tenetur.
+              </p>
+            </div>
+
+            <div class="quantity">
+              <h4>QTY</h4>
+              <div class="rate">
+                <h4 onclick="decrementQuantity()">-</h4>
+                <p id="product-quantity"></p>
+                <h4 onclick="incrementQuantity()">+</h4>
+              </div>
+            </div>
+
+            <div class="price">
+              <h1 id="product-price"></h1>
+              <button onclick="addToCart()" class="addtocart">
+                <p>ADD TO CART</p>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const product = JSON.parse(localStorage.getItem("selectedProduct"));
+      if (product) {
+        document.getElementById("product-image").src = product.imageUrl;
+        document.getElementById("product-name").textContent = product.name;
+        document.getElementById(
+          "product-price"
+        ).textContent = `₦${product.price}`;
+
+        const quantity = JSON.parse(localStorage.getItem("cart")) || [];
+        const cartItem = quantity.find((item) => item.name === product.name);
+
+        if (cartItem) {
+          document.getElementById(
+            "product-quantity"
+          ).textContent = `${cartItem.quantity}`;
+        } else {
+          document.getElementById("product-quantity").textContent = "1"; // Default quantity
+        }
+      }
+
+      const addToCart = () => {
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const existingProduct = cart.find((item) => item.name === product.name);
+
+        if (existingProduct) {
+          existingProduct.quantity += 1;
+        } else {
+          cart.push({
+            name: product.name,
+            price: product.price,
+            imageUrl: product.imageUrl,
+            quantity: 1,
+          });
+        }
+        localStorage.setItem("cart", JSON.stringify(cart));
+        updateCartCount();
+        //update the quantity displayed on the product page
+        document.getElementById("product-quantity").textContent = cart.find(
+          (item) => item.name === product.name
+        ).quantity;
+      };
+      function incrementQuantity() {
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const cartItem = cart.find((item) => item.name === product.name);
+
+        if (cartItem) {
+          cartItem.quantity += 1;
+          localStorage.setItem("cart", JSON.stringify(cart));
+          document.getElementById("product-quantity").textContent =
+            cartItem.quantity;
+          updateCartCount();
+        }
+      }
+
+      function decrementQuantity() {
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const cartItem = cart.find((item) => item.name === product.name);
+
+        if (cartItem && cartItem.quantity > 1) {
+          cartItem.quantity -= 1;
+          localStorage.setItem("cart", JSON.stringify(cart));
+          document.getElementById("product-quantity").textContent =
+            cartItem.quantity;
+          updateCartCount();
+        }
+      }
+
+      // function to update cart icon count
+      const updateCartCount = () => {
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const totalItem = cart.reduce((acc, item) => acc + item.quantity, 0);
+        document.getElementById("cart-count").textContent = totalItem;
+      };
+      window.onload = updateCartCount;
+
+      document.getElementById("hamburg")?.addEventListener("click",() => {
+        document.getElementById("nav-menu")?.classList.toggle("active");
+      })
+    </script>
+  </body>
+</html>

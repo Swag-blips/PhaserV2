@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign in</title>
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      .error{
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- background pic -->
+    <div class="background_img">
+      <!--dim  -->
+      <div class="transparent">
+        <!-- main signin parant div.....border radi.. -->
+        <div class="signin_text">
+          <!-- sign in text -->
+          <div class="h2_holder">
+            <h2>Sign in</h2>
+          </div>
+          <!-- input/password/email/....parent div -->
+          <form id="loginForm" onsubmit="validateLogin(event)" class="input_div">
+            <div class="input_holder">
+              <div class="email_input">
+                <!-- email -->
+                <div class="Email">
+                  <p>Email</p>
+                </div>
+                <!-- input -->
+                <input id="useremail" type="email" placeholder="Johncaner@gmail.com" />
+              </div>
+              <!-- password -->
+              <div class="email_input">
+                <div class="Email">
+                  <p>Password</p>
+                </div>
+                <!-- input -->
+                <input id="password" type="password" placeholder="******" />
+              </div>
+              <!-- remember me -->
+              <div class="remember">
+           
+                <div class="remember_text">
+                  <div class="tick"></div>
+                  <p>Remember me?</p>
+                </div>
+                <div class="forgetpass">
+                  <p>Forget password?</p>
+                </div>
+              </div>
+            </div>
+            <!-- button -->
+            <div class="btn">
+                <button type="submit">
+                    <h3>SUBMIT</h3>
+                </button>
+            </div>
+            <p id="error" class="error"></p>
+            <script src="/login.js"></script>
+          </form>
+      <p>Dont have an account? <a href="./signup/signup.html" style="color: green;">SIGN UP</a></p>
+        </div>
+
+       
+      </div>
+    </div>
+  </body>
+</html>

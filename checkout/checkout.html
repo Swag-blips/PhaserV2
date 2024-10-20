@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="checkout.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+<div class="container">
+    <h1>Checkout Page</h1>
+    <div class="order-summary">
+        <h3>Order Summary</h3>
+        <table id="checkout-table">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Order items will be injected here using JavaScript -->
+            </tbody>
+        </table>
+
+        <div class="total-summary">
+            <p>Subtotal: <span id="subtotal">$0</span></p>
+            <p>Shipping: <span>Free</span></p>
+            <h3>Total: <span id="total">$0</span></h3>
+        </div>
+
+        <button id="checkout-btn">Confirm Checkout</button>
+    </div>
+</div>
+
+<script src="checkout.js"></script>
+
+</body>
+</html>
